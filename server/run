@@ -1,0 +1,3 @@
+#!/bin/bash
+
+uvicorn server:app --port 7919  # Largest 4-digit prime

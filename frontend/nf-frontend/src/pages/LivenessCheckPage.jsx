@@ -3,9 +3,8 @@ import { LivenessCheckComponent } from '../components/LivenessCheckComponent.jsx
 export function LivenessCheck() {
     //return 'foobar';
     return (
-        <div>
+        <div className="bg-black">
             <LivenessCheckComponent />;
         </div>
-    ) 
-    //return <LivenessCheckComponent />;
+    )
 }

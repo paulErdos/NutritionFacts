@@ -1,0 +1,10 @@
+Frontend:
+* Vanilla React may be most strategic.
+* NextUI looks cool, but component libraries probably aren't the ideal.
+* Things built on top of Tailwind might be right. Because what I'm looking for
+  isn't components, but styling. I can write the components, and probably should
+  keep that up. When I'm sharp at it I'm good. 
+
+Backend:
+Falcon: runs fast, and I write it fast
+Actix: runs ~10x as fast, low electricity demand, idk rust yet, and knowing it is an active goal, as is diversifying my languageset.

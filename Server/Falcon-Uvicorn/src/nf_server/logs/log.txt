@@ -1,0 +1,15 @@
+
+on get s
+on get sp
+on get spi
+on get spin
+INFO:     192.168.1.6:41868 - "GET /search-test/sp HTTP/1.1" 200 OK
+INFO:     192.168.1.6:41866 - "GET /search-test/s HTTP/1.1" 200 OK
+on get spina
+on get spinac
+INFO:     192.168.1.6:41884 - "GET /search-test/spi HTTP/1.1" 200 OK
+on get spinach
+INFO:     192.168.1.6:41888 - "GET /search-test/spin HTTP/1.1" 200 OK
+INFO:     192.168.1.6:41866 - "GET /search-test/spina HTTP/1.1" 200 OK
+INFO:     192.168.1.6:41868 - "GET /search-test/spinac HTTP/1.1" 200 OK
+INFO:     192.168.1.6:41894 - "GET /search-test/spinach HTTP/1.1" 200 OK

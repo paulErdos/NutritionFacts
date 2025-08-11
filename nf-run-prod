@@ -3,7 +3,7 @@
 ## TODO: Put bash notes in bash notes.
 
 # Already running?
-if [ $(./nf-status) -eq 1 ]; then
+if [ $(./nf-status-prod) -eq 1 ]; then
     echo 'Running'
     exit
 fi

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+(crontab -l 2>/dev/null; echo "*/1 * * * * ""cd $(pwd) && ./nf-run-prod") | crontab -
+

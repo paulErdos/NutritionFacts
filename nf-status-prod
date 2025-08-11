@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if [ ! -z "$(lsof -i :9001,9003)" ]; then 
+    echo 1
+else
+    echo 0
+fi

@@ -10,3 +10,4 @@ data/
 *.gz
 *.ignore*
 Server/nginx/logs/nginx.pid
+*log

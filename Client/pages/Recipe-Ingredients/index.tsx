@@ -10,6 +10,7 @@ import AsyncSelect from 'react-select/async';
 // Local
 import NFLabel from './NFLabel';
 import { Food, Recipe, FoodNutrient } from './call';
+import RecipeIngredients from './RecipeIngredients'
 
 
 
@@ -187,22 +188,6 @@ export default function RecipeIngredientsNutritionFacts() {
             {/* TODO: Recipe-Ingredients */}
             <Card className="max-w-[700px] w-full">
 
-              <CardHeader className="flex justify-end">
-                <div className="flex flex-row gap-2 items-center">
-                    <Input
-                      type="text"
-                      value={recipeName}
-                      onChange={e => setRecipeName(e.target.value)}
-                      placeholder="Recipe name"
-                      className="w-full"
-                    />
-                    <Button color="primary" variant="bordered" onClick={handleSaveRecipe} disabled={!recipeName || foods.length === 0}>
-                      Save Recipe
-                    </Button>
-                  </div>
-              </CardHeader>
-
-              <Divider />
 
               <CardHeader>
                 <div className="flex flex-col w-full gap-2">
@@ -227,12 +212,12 @@ export default function RecipeIngredientsNutritionFacts() {
 
               <Divider />
                             
-              <CardBody>
-                {foods.length === 0 ? (
-                  <div>
-                  
-                  </div>
-                ) : (
+              {foods.length === 0 ? (
+                <div>
+                
+                </div>
+              ) : (
+                <CardBody>
                   <div className="flex flex-col gap-4">
                     {foods.map((food, idx) => (
                       <div key={idx} className="flex items-center gap-4">
@@ -253,8 +238,30 @@ export default function RecipeIngredientsNutritionFacts() {
                       </div>
                     ))}
                   </div>
+                </CardBody>
+              )}
+
+              <Divider />
+
+                {foods.length === 0 ? (
+                    <div>
+                    </div>
+                ) : ( 
+              <CardHeader className="flex justify-end">
+                  <div className="flex flex-row gap-2 items-center">
+                      <Input
+                        type="text"
+                        value={recipeName}
+                        onChange={e => setRecipeName(e.target.value)}
+                        placeholder="Recipe name"
+                        className="w-full"
+                      />
+                      <Button color="primary" variant="bordered" onClick={handleSaveRecipe} disabled={!recipeName || foods.length === 0}>
+                        Save Recipe
+                      </Button>
+                    </div>
+              </CardHeader>
                 )}
-              </CardBody>
 
             </Card>
           </div>

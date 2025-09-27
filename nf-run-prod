@@ -10,10 +10,10 @@
 
 if [ "$(lsof -i :9001 | wc -l)" -eq 0 ]; then
     # Falcon Server
-    cd Server/Falcon-Uvicorn && poetry run ./start-server.sh &
+    cd Server/Falcon-Uvicorn && poetry run ./start-server.sh >> ../../run.log &
 fi
 
 if [ "$(lsof -i :9003 | wc -l)" -eq 0 ]; then
     # nginx serving HeroUI Client
-    cd Server/nginx && ./start.sh
+    cd Server/nginx && ./start.sh >> ../../run.log &
 fi

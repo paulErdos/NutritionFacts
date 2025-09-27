@@ -1,5 +1,18 @@
 #!/usr/bin/env bash
 
+########################################################################
+# Readme
+##########################################################################
+#
+# Return: zero means on. 
+# I'm attempting to follow unix conventions although 
+# I'm not sure that's best 
+# but for now 
+# the goal is to get stable first and we can refine the flow later.
+# 
+#
+##########################################################################
+
 # Legend
 # 
 # 1: Data server off, nothing else checked

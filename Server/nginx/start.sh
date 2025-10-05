@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+# Halt system nginx, if running
+sudo systemctl stop nginx
+
+# Stop, if running
+./stop.sh 2> /dev/null
+
+# Start 
 ./nginx-1.28.0/objs/nginx \
     -p $(pwd) \
     -e logs/error.log \

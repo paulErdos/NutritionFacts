@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Halt system nginx, if running
-sudo systemctl stop nginx
+#systemctl stop nginx
 
 # Stop, if running
 ./stop.sh 2> /dev/null

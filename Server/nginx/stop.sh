@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Don't if we're not running
-if [ $(./nf-nginx-status.sh) -eq 0 ]; then
+if [ $(./status.sh) -eq 0 ]; then
     echo 'Nginx not seen to be running' >&2
     exit 1
 fi

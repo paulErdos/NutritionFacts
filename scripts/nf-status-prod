@@ -15,28 +15,36 @@
 
 # Legend
 # 
-# 1: Data server off, nothing else checked
-# 2: Data server on, web server off
-# 0: All on
+# 1: Something  is off
+# 0: Everything is on
 #
 
+anything_off=0
 
+echo -n 'Web server '
+if [ "$(../Server/nginx/status.sh)" -eq 0 ]; then
+    echo -n 'not '
+    anything_off=1
+fi
+echo 'running'
+
+echo -n 'Data server '
 if [ -z "$(lsof -i :9001)" ]; then
-    # Data server not running
-    echo 1
-    echo 'Data server not running' >> /dev/stderr
-    exit
+    echo -n 'not '
+    anything_off=1
 fi
+echo 'running'
 
+echo $anything_off
+exit $anything_off
 
-if [ -z "$(lsof -i :9003)" ]; then
-    # Web server not running
-    echo 2
-    echo 'Web server not running' >> /dev/stderr
-    exit
-fi
-
-echo 0
+## Another way of checking nginx
+#echo -n 'Web server '
+#if [ -z "$(lsof -i :9003)" ]; then
+#    echo -n 'not '
+#    anything_off=1
+#fi
+#echo 'running'
 
 #
 #if [ "$( (lsof -i :9001 | wc -l; lsof -i :9003 | wc -l ) | wc -l )" -ne "2" ];

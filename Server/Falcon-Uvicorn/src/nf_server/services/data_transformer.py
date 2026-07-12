@@ -5,6 +5,7 @@ from nf_server.services.data_cleaning import clean
 import os
 import json
 from time import time
+from pathlib import Path 
 
 data_log_path = 'data-log.ignore/'
 
@@ -23,3 +24,10 @@ def log_data(data):
 def standardize(data):
     log_data(data)    
     return clean(data)
+
+
+def create_directory(dir_name: str) -> None:
+    path = Path(dir_name)
+    path.mkdir(parents=True, exist_ok=True)
+
+create_directory(data_log_path)

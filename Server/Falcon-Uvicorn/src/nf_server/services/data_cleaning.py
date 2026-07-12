@@ -13,6 +13,7 @@ def clean(data):
 
 
 def remap_criteria(data):
+    print(data)
     data['query'] = data['foodSearchCriteria']['generalSearchInput']
 
 

@@ -14,7 +14,7 @@ fi
 
 if [ "$(lsof -i :9003 | wc -l)" -ne 0 ]; then
     # Halt nginx
-    cd ../Server/nginx/ && ./stop.sh &
+    cd Server/nginx/ && ./stop.sh &
 fi
 
 #./nf-status-prod

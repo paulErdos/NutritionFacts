@@ -8,7 +8,7 @@
 #    exit
 #fi
 
-cd ..
+#cd ..
 
 if [ "$(lsof -i :9001 | wc -l)" -eq 0 ]; then
     # Falcon Server

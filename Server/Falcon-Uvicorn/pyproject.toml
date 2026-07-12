@@ -9,7 +9,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "falcon (>=4.0.2,<5.0.0)",
-    "uvicorn (>=0.34.0,<0.35.0)",
+    "uvicorn[standard] (>=0.51.0,<0.52.0)",
     "httpx (>=0.28.1,<0.29.0)"
 ]
 

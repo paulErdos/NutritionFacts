@@ -1,8 +1,0 @@
-#!/usr/bin/bash
-
-#!/bin/sh
-# Wrapper for vendored Poetry
-POETRY_DIR="$(dirname "$0")/tools/poetry"
-export PYTHONPATH="$POETRY_DIR:$PYTHONPATH"
-exec python3 -m poetry "$@"
-

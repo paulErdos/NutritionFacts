@@ -18,7 +18,7 @@ export default function IndexPage() {
       <section className="flex flex-row gap-4 py-8 md:py-10">
 
         {/*  First, the left of two screen-height columns  */}
-        <section className="flex flex-col justify-left gap-4 py-8 md:py-10 bg-gray-900 py-6 px-6 rounded-3xl">
+        <section className="flex flex-col justify-center gap-4 py-8 md:py-10 bg-gray-900 py-6 px-6 rounded-3xl">
           {/*  First, the top of two half-screen-height,half-screen-width rows  */}
           <div className="inline-block max-w-xl text-left justify-center bg-gray-700 py-6 px-6 rounded-3xl">
             <span className={title()}>Make&nbsp;</span>
@@ -48,13 +48,13 @@ export default function IndexPage() {
 
         {/* TODO: move all todos to issues
             TODO: section vs div
-         */}
-        {/*  Second, right of two screen-height columns  */}
+         
+        {/*  Second, right of two screen-height columns  
         <div className="flex flex-row justify-left gap-4 py-8 md:py-10 bg-gray-900 py-6 px-6 rounded-3xl">
-          {/*  First, left, a column one-third of this column's width  */}
+          {/*  First, left, a column one-third of this column's width  
           <div className="flex flex-col max-w-xl text-right justify-center bg-gray-700 py-6 px-6 rounded-3xl">
           </div>
-          {/*  Second, right, a column two-thirds of this column's width  */}
+          {/*  Second, right, a column two-thirds of this column's width  
           <div className="flex flex-col max-w-xl text-right justify-center bg-gray-700 py-6 px-6 rounded-3xl">
             {/*  This section has one giant region, populated by
                  a series of semi-overlapping tiles with increasing right
@@ -68,10 +68,11 @@ export default function IndexPage() {
 
                  Perhaps toggle between the three sizes. I want to showcase
                  the small size.
-             */}
+            
           </div>
-        {/*  End of second main column  */}
+        {/*  End of second main column  
         </div>
+        */}
 
       </section>
     </DefaultLayout>

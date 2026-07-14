@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 # Already running?
 #if [ $(./nf-status-prod) -eq 0 ]; then

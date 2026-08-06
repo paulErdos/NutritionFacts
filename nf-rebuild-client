@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-cd Client && npm run build
+cd Client && npm run build && cp -r out/* ../Server/nginx/Client && chmod -R o+rx ../Server/nginx/Client && cd -
+

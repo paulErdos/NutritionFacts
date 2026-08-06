@@ -10,6 +10,8 @@
 
 #cd ..
 
+./nf-rebuild-client
+
 if [ "$(lsof -i :9001 | wc -l)" -eq 0 ]; then
     # Falcon Server
     cd Server/Falcon-Uvicorn && poetry run ./start-server.sh >> ../../run.log &

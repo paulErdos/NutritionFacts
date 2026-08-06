@@ -247,7 +247,7 @@ export default function RecipeIngredientsNutritionFacts() {
                     <div>
                     </div>
                 ) : ( 
-              <CardHeader className="flex justify-end">
+              <CardHeader className="flex justify-end z-1">
                   <div className="flex flex-row gap-2 items-center">
                       <Input
                         type="text"

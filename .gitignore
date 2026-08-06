@@ -11,3 +11,4 @@ data/
 *.ignore*
 Server/nginx/logs/nginx.pid
 *log*
+/logs/

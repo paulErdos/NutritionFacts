@@ -5,4 +5,5 @@
 # -p port_for_localhost:port_for_inside_container
 # nf-nginx:latest: <image>:<tag>. If the tag is not found, docker attempts to pull
 # --rm: Deletes the container when it stops.
-docker run --rm --name nf-nginx-container -p 8080:80 nf-nginx:latest
+echo 'Serving on port 8083'
+docker run --rm --name nf-nginx-container -p 8083:9003 nf-nginx:latest

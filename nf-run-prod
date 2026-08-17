@@ -19,5 +19,10 @@ fi
 
 if [ "$(lsof -i :9003 | wc -l)" -eq 0 ]; then
     # nginx serving HeroUI Client
-    cd Server/nginx && ./start.sh >> ../../run.log &
+
+    # From native nginx
+    #cd Server/nginx/Native && ./start.sh >> ../../run.log &
+
+    # From Docker
+    cd Server/nginx/Docker && ./build.sh && ./run.sh 
 fi

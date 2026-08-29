@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+
+## TODO: Put bash notes in bash notes.
+
+## Already running?
+#if [ $(./nf-status-prod) -eq 1 ]; then
+#    echo 'Running'
+#    exit
+#fi
+
+./stop
+
+if [ "$(lsof -i :9001 | wc -l)" -eq 0 ]; then
+    # Falcon Server
+    cd Server/Falcon-Uvicorn && poetry run ./start-server.sh &
+else
+    echo 'Looks like data server already running'
+fi
+
+if [ "$(lsof -i :9003 | wc -l)" -eq 0 ]; then
+    # nginx serving HeroUI Client
+    cd Server/nginx && ./start.sh  &
+else
+    echo 'Looks like UI server already running'
+fi

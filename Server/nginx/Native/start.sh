@@ -6,6 +6,9 @@
 # Stop, if running
 ./stop.sh 2> /dev/null
 
+# Inform
+echo 'Attempting to serve on 9003'
+
 # Start 
 ./nginx-1.28.0/objs/nginx \
     -p $(pwd) \

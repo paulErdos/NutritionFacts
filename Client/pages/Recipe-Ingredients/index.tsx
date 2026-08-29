@@ -46,7 +46,11 @@ const alterResponseData = (data: any[]): any[] => {
 const loadOptions = async (inputValue: string) => {
   if (!inputValue) return [];
   try {
+<<<<<<< Updated upstream
     const url = `http://localhost:9001/search-test/${encodeURIComponent(inputValue)}`;
+=======
+    const url = `${process.env.data_server_base_url}/search-test/${encodeURIComponent(inputValue)}`;
+>>>>>>> Stashed changes
     const response = await fetch(url);
     const text = await response.text();
     const data = JSON.parse(text);  // TODO: unaddressed failure mode that occurs ...

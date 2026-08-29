@@ -46,6 +46,7 @@ export default function IndexPage() {
         {/*  End of first column  */}
         </section>
 
+<<<<<<< Updated upstream
         {/* TODO: move all todos to issues
             TODO: section vs div
          
@@ -73,6 +74,8 @@ export default function IndexPage() {
         {/*  End of second main column  
         </div>
         */}
+=======
+>>>>>>> Stashed changes
 
       </section>
     </DefaultLayout>

@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+##
+# Run: creates a container: image --> container, and starts it
+##
+
+
 # docker run -d to detach and not print nginx log output
 # --name: gives the container a name
 # -p port_for_localhost:port_for_inside_container
